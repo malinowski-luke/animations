@@ -1,0 +1,27 @@
+article {
+  padding: 5vw 15vw;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+@media (max-width: 767px) {
+  article {
+    padding: 5vw 10vw;
+  }
+}
+
+article p {
+  margin-bottom: 4vw;
+}
+
+@media (min-width: 767px) and (max-width: 1025px) {
+  article {
+    padding: 5vw 8vw;
+  }
+}
+
+@media (max-width: 767px) {
+  article {
+    padding: 5vw 10vw;
+  }
+}

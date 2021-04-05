@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* scope of this var is for the entire html dom */
+:root {
+  /* all var names must start with -- */
+  --background_color: #f3f3f3;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  /* to use a var you need call var() and pass in you var */
+  background: var(--background_color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 15vw;
+  height: 15vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 5px 15px #000000;
+}
+.box {
+  margin: 20px;
+  width: 5vw;
+  height: 5vw;
+  background: rgb(30, 135, 191);
+  opacity: 0;
+  animation: fade 3s infinite, spin 1.5s ease-in-out infinite;
+  animation-delay: calc(0.8s * var(--i));
+}
+/* keyframes */
+@keyframes spin {
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

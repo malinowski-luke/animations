@@ -1,0 +1,83 @@
+/* reset browser default css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./assets/code.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  width: inherit;
+  height: inherit;
+  background: black;
+  opacity: 0.8;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-text {
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 8rem;
+}
+
+.article-section {
+  width: 100%;
+  height: 100vh;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article > * {
+  width: 50%;
+  padding: 20px;
+}
+
+article p {
+  font-size: 1.2em;
+}
+
+article figure img {
+  width: 100%;
+}
+
+article figure {
+  text-align: center;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+.align-left.slide-in {
+  transform: translateX(-100%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(100%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
